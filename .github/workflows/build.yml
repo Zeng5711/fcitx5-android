@@ -3,6 +3,10 @@ name: Build
 on:
   pull_request:
   workflow_dispatch:
+    inputs:
+      abi: 
+        description: 'app cpu 架构类型'
+        required: false
 
 jobs:
   Release:
