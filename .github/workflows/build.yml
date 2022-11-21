@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       abi: 
+        type: choice
         description: 'app cup abi'
         required: false
         options:
