@@ -19,7 +19,7 @@ jobs:
     strategy:
       matrix:
         abi:
-          - ${ github.evnet.inputs.abi }
+          - ${{ github.evnet.inputs.abi }}
     env:
       ABI: ${{ matrix.abi }}
     steps:
