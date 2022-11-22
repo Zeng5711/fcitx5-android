@@ -56,5 +56,8 @@ jobs:
       - name: Build ${{ matrix.BuildType }} APK
         run: ./gradlew assemble${{ matrix.BuildType }} --no-daemon
         
-      - name: Find apk
-        run: find . -name "*.apk"
+      - name: Upload Artifact 
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.BuildType }}-${{ matrix.abi }}
+          path: /app/build/outputs/apk/
