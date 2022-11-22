@@ -19,8 +19,8 @@ jobs:
     strategy:
       matrix:
         BuildType:
-          - release
-          - debug
+          - Release
+          - Debug
         abi:
           - ${{ github.evnet.inputs.abi }}
     env:
