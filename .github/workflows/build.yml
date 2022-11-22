@@ -55,3 +55,6 @@ jobs:
 
       - name: Build Release APK
         run: ./gradlew assemble${{ matrix.BuildType }} --no-daemon
+        
+      - name: Find apk
+        run: find . -name "*.apk"
