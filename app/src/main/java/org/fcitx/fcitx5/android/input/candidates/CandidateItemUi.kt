@@ -24,10 +24,10 @@ class CandidateItemUi(override val ctx: Context, theme: Theme) : Ui {
     }
     
      val index = textView {
-        textSize = 5f
+        textSize = 10f
         isSingleLine = true
         gravity = gravityCenter
-        setTextColor(Color.RED)
+        setTextColor(theme.keyTextColor)
     }
 
     override val root = view(::CustomGestureView) {
