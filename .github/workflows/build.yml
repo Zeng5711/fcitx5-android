@@ -18,6 +18,9 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
+        BuildType:
+          - release
+          - debug
         abi:
           - ${{ github.evnet.inputs.abi }}
     env:
@@ -51,4 +54,4 @@ jobs:
         uses: gradle/gradle-build-action@v2
 
       - name: Build Release APK
-        run: ./gradlew assembleRelease --no-daemon
+        run: ./gradlew assemble${{ matrix.BuildType }} --no-daemon
