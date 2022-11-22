@@ -42,7 +42,7 @@ abstract class BaseCandidateViewAdapter :
     @CallSuper
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.ui.text.text = getCandidateAt(position)
-        holder.ui.index.text = position.toString()
+        holder.ui.index.text = "${position+1}"
         holder.idx = position
     }
 
